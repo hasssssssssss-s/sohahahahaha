@@ -8,7 +8,7 @@ const RoutesPage: React.FC = () => {
   const [accessGranted, setAccessGranted] = React.useState(false);
 
   return (
-    <Router basename="/Will-You-Be-My-Valentine">
+    <Router>
       <Routes>
         <Route path="/" element={<App setAccessGranted={setAccessGranted} />} />
         <Route
