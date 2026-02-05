@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import BackgroundContainer from "./BackgroundContainer";
 import BackgroundImages from "./BackgroundImages";
 import { Box, Typography } from "@mui/material";
@@ -6,18 +6,20 @@ import GiftBoxAnimation from "../animation/GiftBoxAnimation";
 import HeartRain from "../animation/HeartRain";
 
 const GiftPage: React.FC = () => {
-  const [ , setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("You have a gift from Hasnain!");
 
   const handleBoxClick = () => {
+    if (!isOpen) {
+      const audio = new Audio(`/assets/song.mp3`);
+      audio.play().catch(() => {
+        // Audio play failed (common on mobile)
+        console.log("Tap to enable audio");
+      });
+    }
     setIsOpen(true);
     setMessage("Be ready by 6pm, Soha!");
   };
-
-  useEffect(() => {
-    const audio = new Audio(`/assets/song.mp3`);
-    audio.play();
-  }, []);
 
   return (
     <BackgroundContainer>
