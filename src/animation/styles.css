@@ -14,30 +14,30 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10%;
+  bottom: 5%;
   cursor: pointer;
   outline: none;
 }
 
 .box img {
   margin: -5px;
-  max-width: 180px;
+  width: 150px;
   height: auto;
 }
 
 .tickets {
   position: absolute;
   left: 50%;
-  top: 5%;
-  transform: translate(-50%) scale(0.1);
+  top: 10%;
+  transform: translateX(-50%) scale(0.1);
   z-index: 10;
   opacity: 0;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  max-width: 150px;
+  width: 120px;
 }
 
 .tickets.animated {
-  transform: translate(-50%, -120px) scale(1);
+  transform: translateX(-50%) translateY(-100px) scale(1);
   opacity: 1;
 }
 
@@ -45,11 +45,11 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(10% + 160px);
+  bottom: calc(5% + 120px);
 }
 
 .lid img {
-  max-width: 180px;
+  width: 150px;
   height: auto;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .rotated {
-  transform: rotate(145deg) translate(-70%, -170px);
+  transform: rotate(145deg) translateX(-50%);
 }
 
 @keyframes wiggle {
