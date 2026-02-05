@@ -15,7 +15,7 @@ interface State {
 }
 
 const init_state: State = {
-  move: "move",
+  move: "",
   jump: "",
   rotated: "",
   rotating: "",
@@ -36,19 +36,16 @@ const GiftBoxAnimation: React.FC = () => {
     const isDone = rotated === "rotated";
 
     if (!isDone) {
-      setState({ rotating: "rotating" });
+      setState({ rotating: "rotating", move: "move" });
       setTimeout(() => {
         setState({ jump: "jump" });
       }, 300);
       setTimeout(() => {
         setState({ rotated: "rotated", animated: "animated" });
-        console.log("Tickets animation triggered");
       }, 1000);
     } else {
       setState(init_state);
     }
-    const moving = move === "move" ? "" : "move";
-    setState({ move: moving });
   };
 
   return (
