@@ -4,7 +4,7 @@ const BackgroundImages: React.FC = () => {
   return (
     <>
       <img
-        src={`${import.meta.env.VITE_PUBLIC_URL}/bow.png`}
+        src={`/assets/bow.png`}
         alt="Bow"
         style={{
           position: "absolute",
@@ -16,7 +16,7 @@ const BackgroundImages: React.FC = () => {
         }}
       />
       <img
-        src={`${import.meta.env.VITE_PUBLIC_URL}/bear.png`}
+        src={`/assets/bear.png`}
         alt="Teddy"
         style={{
           position: "absolute",
@@ -27,7 +27,7 @@ const BackgroundImages: React.FC = () => {
         }}
       />
       <img
-        src={`${import.meta.env.VITE_PUBLIC_URL}/heart.png`}
+        src={`/assets/heart.png`}
         alt="Heart"
         style={{
           position: "absolute",

@@ -2,9 +2,9 @@ import React, { useReducer } from "react";
 import "./styles.css";
 import Confetti from "./confetti/Confetti";
 
-const box = import.meta.env.VITE_PUBLIC_URL + "/box.png";
-const boxLid = import.meta.env.VITE_PUBLIC_URL + "/lid.png";
-const tickets = import.meta.env.VITE_PUBLIC_URL + "/tickets.png";
+const box = "/assets/box.png";
+const boxLid = "/assets/lid.png";
+const tickets = "/assets/tickets.png";
 
 interface State {
   move: string;
