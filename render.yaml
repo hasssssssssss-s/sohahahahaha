@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: sohahahahaha
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    staticPublishDirectory: dist
