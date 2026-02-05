@@ -13,44 +13,37 @@ body {
   padding: 0;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: 5%;
+  transform: translate(-50%);
+  bottom: 0;
   cursor: pointer;
   outline: none;
 }
 
 .box img {
   margin: -5px;
-  width: 150px;
-  height: auto;
 }
 
 .tickets {
   position: absolute;
   left: 50%;
   top: 10%;
-  transform: translateX(-50%) scale(0.1);
+  transform: translate(-50%) scale(0.1);
+  bottom: 0;
   z-index: 10;
   opacity: 0;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  width: 120px;
 }
 
 .tickets.animated {
-  transform: translateX(-50%) translateY(-100px) scale(1);
+  transform: translate(-50%, -200px) scale(1);
   opacity: 1;
 }
 
 .lid {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(5% + 120px);
-}
-
-.lid img {
-  width: 150px;
-  height: auto;
+  transform: translate(-50%);
+  bottom: 4.8em;
 }
 
 .jump {
@@ -66,47 +59,47 @@ body {
 }
 
 .rotated {
-  transform: rotate(145deg) translateX(-50%);
+  transform: rotate(145deg) translate(-70%, -170px);
 }
 
 @keyframes wiggle {
   10%,
   90% {
-    transform: translateX(-50%) translate3d(-1px, 0, 0);
+    transform: translate(-50%) translate3d(-1px, 0, 0);
   }
 
   20%,
   80% {
-    transform: translateX(-50%) translate3d(2px, 0, 0);
+    transform: translate(-50%) translate3d(2px, 0, 0);
   }
 
   30%,
   50%,
   70% {
-    transform: translateX(-50%) translate3d(-4px, 0, 0);
+    transform: translate(-50%) translate3d(-4px, 0, 0);
   }
 
   40%,
   60% {
-    transform: translateX(-50%) translate3d(4px, 0, 0);
+    transform: translate(-50%) translate3d(4px, 0, 0);
   }
 }
 
 @keyframes rotating {
   0% {
-    transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translate(-50%, 0);
   }
 
   100% {
-    transform: rotate(145deg) translateX(-50%);
+    transform: rotate(145deg) translate(-70%, -170px);
   }
 }
 
 @keyframes jump {
   from {
-    transform: translateX(-50%);
+    bottom: 0;
   }
   to {
-    transform: translateX(-50%) translateY(-100px);
+    bottom: 20em;
   }
 }
