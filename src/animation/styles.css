@@ -3,6 +3,7 @@ body {
   padding: 0;
   overflow: hidden;
   background: #f06a19;
+  overscroll-behavior: none;
 }
 
 .box {
@@ -12,37 +13,44 @@ body {
   padding: 0;
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
-  bottom: 0;
+  transform: translateX(-50%);
+  bottom: 10%;
   cursor: pointer;
   outline: none;
 }
 
 .box img {
   margin: -5px;
+  max-width: 180px;
+  height: auto;
 }
 
 .tickets {
   position: absolute;
   left: 50%;
-  top: 10%;
-  transform: translate(-50%) scale(0.1); /* Start small */
-  bottom: 0;
-  z-index: 10; /* Ensure it's above other elements */
-  opacity: 0; /* Start invisible */
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+  top: 5%;
+  transform: translate(-50%) scale(0.1);
+  z-index: 10;
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  max-width: 150px;
 }
 
 .tickets.animated {
-  transform: translate(-50%, -200px) scale(1); /* Move up and scale up */
-  opacity: 1; /* Fade in */
+  transform: translate(-50%, -120px) scale(1);
+  opacity: 1;
 }
 
 .lid {
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
-  bottom: 4.8em;
+  transform: translateX(-50%);
+  bottom: calc(10% + 160px);
+}
+
+.lid img {
+  max-width: 180px;
+  height: auto;
 }
 
 .jump {
@@ -64,41 +72,41 @@ body {
 @keyframes wiggle {
   10%,
   90% {
-    transform: translate(-50%) translate3d(-1px, 0, 0);
+    transform: translateX(-50%) translate3d(-1px, 0, 0);
   }
 
   20%,
   80% {
-    transform: translate(-50%) translate3d(2px, 0, 0);
+    transform: translateX(-50%) translate3d(2px, 0, 0);
   }
 
   30%,
   50%,
   70% {
-    transform: translate(-50%) translate3d(-4px, 0, 0);
+    transform: translateX(-50%) translate3d(-4px, 0, 0);
   }
 
   40%,
   60% {
-    transform: translate(-50%) translate3d(4px, 0, 0);
+    transform: translateX(-50%) translate3d(4px, 0, 0);
   }
 }
 
 @keyframes rotating {
   0% {
-    transform: rotate(0deg) translate(-50%, 0);
+    transform: rotate(0deg) translateX(-50%);
   }
 
   100% {
-    transform: rotate(145deg) translate(-70%, -170px);
+    transform: rotate(145deg) translateX(-50%);
   }
 }
 
 @keyframes jump {
   from {
-    bottom: 0;
+    transform: translateX(-50%);
   }
   to {
-    bottom: 20em;
+    transform: translateX(-50%) translateY(-100px);
   }
 }
