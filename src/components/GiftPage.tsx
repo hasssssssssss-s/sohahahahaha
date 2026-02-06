@@ -16,7 +16,7 @@ const GiftPage: React.FC = () => {
       });
     }
     setIsOpen(true);
-    setMessage("Be ready by 6pm, Soha!");
+    setMessage("MWUAHHHHHHH BISHHHHHHH, I LOVE YOU!");
   };
 
   return (
